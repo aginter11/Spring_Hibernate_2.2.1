@@ -13,10 +13,8 @@ public class Car {
 
     private int series;
 
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
-     private User user;
-
-    public Car(){}
+    public Car() {
+    }
 
     public Car(String name, int series) {
         this.name = name;
@@ -39,11 +37,4 @@ public class Car {
         this.series = series;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }
